@@ -13,7 +13,7 @@ $("#mail-form").submit(function(e) {
     var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
 
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    var item = $("#item").val();
+    var item = $("#item").text();
     var templateParams = {
         name: 'Karegar',
         subject: 'Conformation for pre-order',
@@ -35,6 +35,7 @@ $("#mail-form").submit(function(e) {
         form_time: time
 
     };
+    console.log(item)
     if(name&&email&&print!=="Choose an option"&&pin&&phone&&phone.length===10&&size!=="Choose an option"&&color!=="Choose an option"&&quantity&&item!=""){
         sendEmail(templateParams)
 
@@ -42,6 +43,7 @@ $("#mail-form").submit(function(e) {
         alert("Fill all the details");
     }
     // 
+ 
 });
 
 function sendEmail(templateParams) {
