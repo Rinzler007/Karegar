@@ -10,19 +10,10 @@ $("#mail-form").submit(function(e) {
     var quantity = $("#quantity").val();
     var todayTime = new Date().getTime();
     var today = new Date();
-<<<<<<< Updated upstream
     var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
 
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     var item = $("#item").val();
-=======
-    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    var item=$("#item").text();
-    item.trim()
-        console.log(item)
-
->>>>>>> Stashed changes
     var templateParams = {
         name: 'Karegar',
         subject: 'Conformation for pre-order',
