@@ -1,3 +1,6 @@
+(function() {
+    emailjs.init("user_eJ0NIW3z0iRlJj1lp0TbI");
+})();
 $("#mail-form").submit(function(e) {
     e.preventDefault();
     var name = $("#name").val();
@@ -16,7 +19,7 @@ $("#mail-form").submit(function(e) {
     var item = $("#item").text();
     var templateParams = {
         name: 'Karegar',
-        subject: 'Conformation for pre-order',
+        subject: 'Confirmation for the pre-order',
         to_name: name,
         from_name: 'Karegar',
         message: 'Thanks for showing interest!',
@@ -49,7 +52,7 @@ $("#mail-form").submit(function(e) {
 function sendEmail(templateParams) {
 
 
-    emailjs.send('service_n7kuh7i', 'template_6b46brj', templateParams)
+    emailjs.send('service_qpfdt2u', 'template_ivdcvvo', templateParams)
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
             alert("Your pre-order has been placed. Have a nice day.")
